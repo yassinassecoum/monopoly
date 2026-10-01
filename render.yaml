@@ -1,0 +1,9 @@
+# Déploiement en un clic sur Render (New > Blueprint, puis choisir ce dépôt)
+services:
+  - type: web
+    name: magnat
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
